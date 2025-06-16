@@ -87,7 +87,7 @@ class EcommerceTests(unittest.TestCase):
             self.wait.until(EC.presence_of_element_located((By.XPATH, "//h1[contains(@class, 'text-3xl')]")))
 
             # ✅ Select a size (any available)
-            size_buttons = self.driver.find_elements(By.XPATH, "//button[contains(@class, 'border') and contains(text(),'S') or contains(text(),'M') or contains(text(),'L'>
+            size_buttons = self.driver.find_elements(By.XPATH, "//button[contains(@class, 'border') and contains(text(),'S') or contains(text(),'M') or contains(text(),'L')]")
             self.assertTrue(size_buttons, "❌ No size buttons found on product page.")
             size_buttons[0].click()
 
